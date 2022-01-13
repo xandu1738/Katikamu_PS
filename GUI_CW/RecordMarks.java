@@ -76,7 +76,7 @@ public class RecordMarks extends JFrame implements ActionListener {
             this.setVisible(false);
         }
         if (event.equals(record)){
-            System.out.println("This is nexists");
+//            System.out.println("This is nexists");
             String subj="";
             String where = "Username = '"+username+"'";
             try {
@@ -98,9 +98,6 @@ public class RecordMarks extends JFrame implements ActionListener {
         if (event.equals(viewRecorded)){
             new TeacherResultsView(username).setVisible(true);
             this.setVisible(false);
-        }else {
-            status.setText("Marks not Recorded for "+registrationNumber.getText());
-            status.setVisible(true);
         }
     }
 }

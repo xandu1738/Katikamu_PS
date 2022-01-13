@@ -15,6 +15,7 @@ public class Welcome extends JFrame  implements ActionListener {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(900,600);
         this.setLayout(null);
+
         student = new JButton("Student");
         student.addActionListener(this);
         student.setBounds(350,250,200,50);
@@ -51,14 +52,11 @@ public class Welcome extends JFrame  implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             Object ev = e.getSource();
             if (ev.equals(student)){
-                login.setText("Student clicked");
-
                 StudentLogin studentLogin = new StudentLogin();
                 studentLogin.setVisible(true);
                 this.setVisible(false);
             }
             if (ev.equals(teacher)){
-                login.setText("Teacher clicked");
                 TeacherLogin teacherLogin = new TeacherLogin();
                 teacherLogin.setVisible(true);
                 this.setVisible(false);

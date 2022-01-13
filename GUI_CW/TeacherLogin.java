@@ -68,13 +68,13 @@ public class TeacherLogin extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         Object event = e.getSource();
         if (event.equals(clear)){
-            username.setText(" ");
+            username.setText("");
             password.setText("");
         }
         if (event.equals(back)){
             Welcome welcome = new Welcome();
-            this.setVisible(false);
             welcome.setVisible(true);
+            this.setVisible(false);
         }
         if (e.getSource().equals(login)){
             char[] pass = password.getPassword();
@@ -88,10 +88,8 @@ public class TeacherLogin extends JFrame implements ActionListener {
                 TeacherMenu teacherMenu = new TeacherMenu(username.getText().trim());
                 teacherMenu.setVisible(true);
                 this.setVisible(false);
-                System.out.println("Teacher present exist");
             }else{
                 logInfo.setVisible(true);
-                System.out.println("Teacher not exist");
             }
         }
 
